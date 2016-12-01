@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta property="og:type" content="article" />
+        <meta property="og:title" content="<%= verse.location %>" />
+        <meta property="og:description" content="<%= verse.text %>" />
+        <meta property="og:image" content="<%= verse.img %>" />
+        <meta name="twitter:card" content="summary_large_image">
+        <meta name="twitter:site" content="@yohanesgultom">
+        <meta name="twitter:creator" content="@yohanesgultom">
+        <meta name="twitter:title" content="<%= verse.location %>">
+        <meta name="twitter:description" content="<%= verse.text %>">
+        <meta name="twitter:image" content="<%= verse.img %>">
+        <title>Share Bible Verses</title>
+        <link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css?family=Yrsa" rel="stylesheet">
+        <style>
+        body {
+            background-color: #4e7da7;
+            color: #e2e1e1;
+        }
+        .verse {
+            text-align: center;
+            font-size: xx-large;
+            font-family: Yrsa, sans-serif;
+            padding: 10px 50px;
+        }
+        .share-buttons {
+            text-align: center;
+        }
+        </style>
+    </head>
+    <body>
+        <!-- social icons by martz90.deviantart.com -->
+        <div class="share-buttons">
+            <a class="share-fb" href="#"><img src="/static/img/fb.png"/></a>
+            <a class="share-twitter" href="#"><img src="/static/img/twitter.png"/></a>
+            <a class="share-whatsapp" href="#"><img src="/static/img/whatsapp.png"/></a>
+            <a class="share-google" href="#"><img src="/static/img/google+.png"/></a>
+        </div>
+        <div class="verse verse-body"> <%= verse.text %> </div>
+        <div class="verse verse-location"> (<%= verse.location %>) </div>
+        <script>
+        document.getElementsByClassName('share-fb')[0].href = 'https://www.facebook.com/sharer/sharer.php?u=' + document.location
+        </script>
+    </body>
+</html>
